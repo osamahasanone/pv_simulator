@@ -1,6 +1,6 @@
 import os
 import sys
-# import random
+import random
 from datetime import datetime
 from rabbitmq.consumer import RabbitMQConsumer
 from filehelpers.csv_helper import CSVHelper
@@ -30,13 +30,13 @@ class PVSimulator(RabbitMQConsumer):
         self.__csv_path = csv_path
         self.csv_helper = CSVHelper(path=csv_path)
 
-    # def current_pv_value(self):
-    #     return random.randint(0, 9.9)
+    def current_pv_value(self):
+        return random.randint(0, 9)
 
     def callback(self, ch, method, properties, body):
         '''To be called when a message detected in the queue'''
-        received_watts = int(body)
-        simulated_pv = 123
+        received_watts = int(body)/1000
+        simulated_pv = self.current_pv_value()
         self.csv_helper.append_line(
             [datetime.now().strftime('%Y-%m-%d %H:%M:%S'), received_watts, simulated_pv, received_watts+simulated_pv])
         print(f' {received_watts} watts dequeued from {self.queue} queue')
