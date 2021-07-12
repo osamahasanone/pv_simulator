@@ -25,8 +25,13 @@ You need to have the RabbitMQ installed on your machine before getting started:
    ```sh
    git clone https://github.com/osamahasanone/pv_simulator.git
    ```
+2. Inastall pipenv:
+
+   ```sh
+   pip3 install pipenv
+   ```
    
-2. Create a Python virtual environment and install required python packages:
+3. Create a Python virtual environment and install all required python packages in one command:
 
    ```sh
    pipenv install --ignore-pipfile
