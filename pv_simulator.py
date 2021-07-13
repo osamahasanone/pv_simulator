@@ -43,11 +43,11 @@ class PVSimulator(RabbitMQConsumer):
             return 0
         if minutes == 0:
             return self.__powers[self.__hours.index(hour)]
-        elif hour < 12:
+        if hour < 12:
             hour_power = self.__powers[self.__hours.index(hour)]
             next_hour_power = self.current_pv_value(hour+1, minutes=0)
             return round(hour_power + ((next_hour_power-hour_power)/60)*minutes, 2)
-        elif hour >= 12:
+        if hour >= 12:
             hour_power = self.__powers[self.__hours.index(hour)]
             next_hour_power = self.current_pv_value(hour+1, minutes=0)
             return round(hour_power - ((hour_power-next_hour_power)/60)*minutes, 2)
