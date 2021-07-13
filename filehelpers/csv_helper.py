@@ -7,14 +7,14 @@ class CSVHelper:
     '''CSV file helper'''
 
     def __init__(self, path):
-        '''Constructor: if file not exited, it will be created along with headers
+        '''Constructor: if file not existed, it will be created along with headers
 
         @parameters:
         path (str): full path to a CSV file
         '''
         self.path = path
         if not os.path.exists(path):
-            self.append_line(['TS','meter','pv_simulated','sum'])
+            self.append_line(['TS', 'meter', 'pv_simulated', 'sum'])
 
     @property
     def path(self):
