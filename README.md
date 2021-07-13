@@ -56,7 +56,7 @@ There are **TWO** Python files to be run:
     ```sh
     python3 meter.py server queue interval
     ```
-    **For Windows**
+    **For Windows:**
     ```sh
     python meter.py server queue interval
     ```
@@ -83,13 +83,13 @@ There are **TWO** Python files to be run:
     ```
   - Execute pv_simulator.py file:
   
-    **For Linux** 
+    **For Linux:** 
     
     ```sh
     python3 pv_simulator.py server queue filename.csv
     ```
     
-    **For Windows**
+    **For Windows:**
     
     ```sh
     python pv_simulator.py server queue filename.csv
