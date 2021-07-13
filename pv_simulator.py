@@ -19,9 +19,9 @@ class PVSimulator(RabbitMQConsumer):
         super().__init__(server, queue)
         self.csv_path = csv_path
         self.csv_helper = CSVHelper(path=csv_path)
-        self.__hours = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-        self.__powers = [0, 0.1, 0.3, 0.8, 1.5, 2.3,
-                         3, 3.2, 3.2, 3, 2.3, 1.5, 0.8, 0.3, 0.1]
+        self.__hours = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+        self.__powers = [0, 0.3, 0.8, 1.5, 2.3,
+                         3, 3.2, 3.2, 3, 2.3, 1.5, 0.8, 0.3]
 
     @property
     def csv_path(self):
