@@ -51,9 +51,14 @@ There are **TWO** Python files to be run:
     pipenv shell
     ```
   - Execute meter.py file:
-  
+    
+    **For Linux**:
     ```sh
     python3 meter.py server queue interval
+    ```
+    **For Windows**
+    ```sh
+    python meter.py server queue interval
     ```
     
     Here we are passing (3) arguments to meter.py:
@@ -78,8 +83,16 @@ There are **TWO** Python files to be run:
     ```
   - Execute pv_simulator.py file:
   
+    **For Linux** 
+    
     ```sh
     python3 pv_simulator.py server queue filename.csv
+    ```
+    
+    **For Windows**
+    
+    ```sh
+    python pv_simulator.py server queue filename.csv
     ```
     
     Here we are passing (3) arguments to pv_simulator.py:
