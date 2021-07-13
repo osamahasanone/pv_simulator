@@ -13,7 +13,7 @@ The output will be saved to a .csv file along with a timestamp.
 
 ## Prerequisites
 
-You need to have the RabbitMQ installed on your machine before getting started:
+You need to have the RabbitMQ server installed on your machine before getting started:
 
   * [Debian and Ubuntu](https://www.rabbitmq.com/install-debian.html)
   * [Windows](https://www.rabbitmq.com/install-windows.html)
@@ -66,7 +66,7 @@ There are **TWO** Python files to be run:
     python3 meter.py localhost pv 2
     ```    
     
-    This means that home power consumption values will be sent to **pv** queue in RabbitMQ installed on **localhost** every **2** seconds.
+    This means that home power consumption values will be sent to **pv** queue in RabbitMQ server installed on **localhost** every **2** seconds.
     
 * **pv_simulator.py**:
   - Open **ANOTHER** Linux bash (or Windows CMD) from the project directory.
@@ -91,7 +91,7 @@ There are **TWO** Python files to be run:
     ```sh
     python3 pv_simulator.py localhost pv pv_values.csv
     ```   
-    This means that home power consumption values will be read from **pv** queue in RabbitMQ installed on **localhost**, and the output will be written to **pv_values.csv**.
+    This means that home power consumption values will be read from **pv** queue in RabbitMQ server installed on **localhost**, and the output will be written to **pv_values.csv**.
 
 * Open the filename.csv in VSCode (to see live changes), and check the output.
 
