@@ -1,4 +1,5 @@
 '''CSV operations abstraction'''
+import os
 import csv
 
 
@@ -12,6 +13,8 @@ class CSVHelper:
         path (str): full path to a CSV file
         '''
         self.path = path
+        if not os.path.exists(path):
+            self.append_line(['TS','meter','pv_simulated','sum'])
 
     @property
     def path(self):
