@@ -6,9 +6,9 @@ The output will be saved to a .csv file along with a timestamp.
 
 ### Built With
 
-* [RabbitMQ](https://www.rabbitmq.com/#getstarted) as message broker.
+* [RabbitMQ 3.8.19](https://www.rabbitmq.com/#getstarted) as message broker.
 * [Python 3.8](https://www.python.org/downloads/release/python-380/)
-* [pipenv](https://pypi.org/project/pipenv/) for creating Python virtual environment.
+* [pipenv 2021.5.29](https://pypi.org/project/pipenv/) for creating Python virtual environment.
 * [pika 1.2.0 package](https://pypi.org/project/pika/) for using RabbitMQ in Python.
 
 ## Prerequisites
@@ -57,7 +57,7 @@ There are **TWO** Python files to be run:
     ```
     
     Here we are passing (3) arguments to meter.py:
-    - **server:** RabbitMQ server name or IP.
+    - **server:** RabbitMQ server name or IP address.
     - **queue:** RabbitMQ queue name.
     - **interval:** seconds to  wait between two messages.
 
@@ -83,7 +83,7 @@ There are **TWO** Python files to be run:
     ```
     
     Here we are passing (3) arguments to pv_simulator.py:
-    - **server:** RabbitMQ server name or IP.
+    - **server:** RabbitMQ server name or IP address.
     - **queue:** RabbitMQ queue name.
     - **filename:** csv file to write the output to.
 
