@@ -37,7 +37,7 @@ You need to have the RabbitMQ server installed on your machine before getting st
    pipenv install --ignore-pipfile
    ```
   
-    Make sure to supply **--ignore-pipfile** option, this will make us on the same verions of used packages.
+    Make sure to supply **--ignore-pipfile** option, this will make us on the same versions of used packages.
   
 ## Usage
 
