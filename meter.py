@@ -19,11 +19,11 @@ class Meter(RabbitMQPublisher):
         try:
             while True:
                 watts = self.current_value()
-                meter.publish(msg_body=str(watts))
+                self.publish(msg_body=str(watts))
                 print(f' {watts} watts published to {self.queue} Queue')
                 time.sleep(interval)
         except:
-            meter.close_connection()
+            self.close_connection()
 
 
 if __name__ == '__main__':
