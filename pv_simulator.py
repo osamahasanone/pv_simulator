@@ -32,6 +32,12 @@ class PVSimulator(RabbitMQConsumer):
         self.csv_helper = CSVHelper(path=csv_path)
 
     def current_pv_value(self,hour, minutes=0):
+        '''predicate pv output power depending on time of the day
+        
+        @parameters:
+        hour (int): hour of day (0-23)
+        minutes (int): minutes after the hour
+        '''
         if hour not in self.hours:
             return 0
         if minutes == 0:

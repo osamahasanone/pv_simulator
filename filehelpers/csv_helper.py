@@ -7,7 +7,7 @@ class CSVHelper:
     '''CSV file helper'''
 
     def __init__(self, path):
-        '''Constructor
+        '''Constructor: if file not exited, it will be created along with headers
 
         @parameters:
         path (str): full path to a CSV file
