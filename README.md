@@ -11,7 +11,7 @@ Receives home power consumption values (in W), and generates simulated PV power 
 
 ## Prerequisites
 
-You need to have RabbitMQ server installed before getting started, please follow the link appropriate to you OS:
+You need to have RabbitMQ server installed before getting started, please follow the link appropriate to your OS:
 
   * [Debian and Ubuntu](https://www.rabbitmq.com/install-debian.html)
   * [Windows](https://www.rabbitmq.com/install-windows.html)
