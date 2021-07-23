@@ -26,7 +26,7 @@ You need to have RabbitMQ server installed before getting started, please follow
 2. Install pipenv:
    
    ```sh
-   pip install pipenv
+   sudo pip install pipenv
    ```
    
 3. Create a Python virtual environment and install all of the required Python packages in one command:
